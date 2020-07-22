@@ -1,9 +1,11 @@
 package pe.com.everis.app.models.documents;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "SavingsAccount")
+@Document(collection = "SavingsAccount")
 public class SavingsAccount {
 	
 	@Id
@@ -16,14 +18,15 @@ public class SavingsAccount {
 	private String accountHolders;
 	private String accountSignatories;
 	
+	private Date createAt;
+	
 	public SavingsAccount() {
 		
 	}
 	
-	public SavingsAccount(String idSavingsAccount, String numberSavingsAccount, String accountType, String customerType,
+	public SavingsAccount(String numberSavingsAccount, String accountType, String customerType,
 			String customerDoc, String accountHolders, String accountSignatories) {
-		super();
-		this.idSavingsAccount = idSavingsAccount;
+		
 		this.numberSavingsAccount = numberSavingsAccount;
 		this.accountType = accountType;
 		this.customerType = customerType;
@@ -32,6 +35,15 @@ public class SavingsAccount {
 		this.accountSignatories = accountSignatories;
 	}
 	
+	
+	public Date getCreateAt() {
+		return createAt;
+	}
+
+	public void setCreateAt(Date createAt) {
+		this.createAt = createAt;
+	}
+
 	public String getIdSavingsAccount() {
 		return idSavingsAccount;
 	}
