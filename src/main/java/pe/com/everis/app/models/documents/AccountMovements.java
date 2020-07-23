@@ -19,6 +19,8 @@ public class AccountMovements {
 	private String accountType;
 	private String numberAccount;
 	
+	private Double finalBalance;
+	
 	public AccountMovements() {
 		
 	}
@@ -34,7 +36,13 @@ public class AccountMovements {
 		this.numberAccount = numberAccount;
 	}
 
+	public Double getFinalBalance() {
+		return finalBalance;
+	}
 
+	public void setFinalBalance(Double finalBalance) {
+		this.finalBalance = finalBalance;
+	}
 
 	public String getIdAccountMovement() {
 		return idAccountMovement;
