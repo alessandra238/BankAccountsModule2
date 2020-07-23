@@ -32,9 +32,9 @@ public class BankAccountsModuleApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		mongoTemplate.dropCollection("SavingsAccount").subscribe();
+		//mongoTemplate.dropCollection("SavingsAccount").subscribe();
 		
-		Flux.just(
+		/*Flux.just(
 				new SavingsAccount("0000001", "CA", "CLIPER", "76593490", "TITULARES", "FIRMANTES"),
 				new SavingsAccount("0000002", "CC", "CLIPERVIP", "76593491", "TITULARES2", "FIRMANTES2"),
 				new SavingsAccount("0000003", "CPF", "CLIPYME", "76593492", "TITULARES3", "FIRMANTES3")
@@ -44,7 +44,7 @@ public class BankAccountsModuleApplication implements CommandLineRunner{
 			return savingsAccountDao.save(savingsAccount);
 			})
 		.subscribe(savingsAccount -> log.info("nro de cta: "+savingsAccount.getNumberSavingsAccount()+" Tipo de cta: "+savingsAccount.getAccountType()));
-		
+	**/	
 	}
 
 }
