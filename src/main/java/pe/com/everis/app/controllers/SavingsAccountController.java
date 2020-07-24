@@ -23,7 +23,7 @@ public class SavingsAccountController {
 	@Autowired
 	private SavingsAccountService savingsAccountService;
 	
-	@GetMapping
+	@GetMapping("/toList")
 	public Mono<ResponseEntity<Flux<SavingsAccount>>> findAll(){
 		return Mono.just(
 				ResponseEntity
